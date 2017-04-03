@@ -6957,7 +6957,20 @@ character_event = {
 ## For the character that gets the mission Sacrifice someone
 society_quest_event = {
 	id = MNM.7025
-	desc = EVTDESC_MNM_7025
+	desc = {
+		trigger = {
+			society_member_of = the_iww
+		}
+		text = EVTDESC_MNM_7025_IWW
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				society_member_of = the_iww
+			}
+		}
+		text = EVTDESC_MNM_7025
+	}
 	border = GFX_event_letter_frame_intrigue
 
 	is_triggered_only = yes
