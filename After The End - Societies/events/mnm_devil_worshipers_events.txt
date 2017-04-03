@@ -5405,6 +5405,23 @@ character_event = { #Head of Religion
 		}
 		if = {
 			limit = { 
+				FROM = { trait = banker }
+				has_quest = quest_the_devil_worshipers_sacrifice_banker
+			}
+			clr_quest = quest_the_devil_worshipers_sacrifice_banker
+			if = {
+				limit = { FROM = { is_female = yes } }
+				sound_effect = devil_worshippers_sacrifice_ruler_female
+			}
+			if = {
+				limit = { FROM = { is_female = no } }
+				sound_effect = devil_worshippers_sacrifice_ruler_male
+			}
+			add_society_currency_medium_effect = yes
+			break = yes
+		}
+		if = {
+			limit = { 
 				FROM = { is_landed = yes }
 				has_quest = quest_the_devil_worshipers_sacrifice_ruler
 			}
@@ -5494,6 +5511,23 @@ character_event = { #Holy man
 			if = {
 				limit = { FROM = { is_female = no } }
 				sound_effect = devil_worshippers_sacrifice_dwarf_male
+			}
+			add_society_currency_medium_effect = yes
+			break = yes
+		}
+		if = {
+			limit = { 
+				FROM = { trait = banker }
+				has_quest = quest_the_devil_worshipers_sacrifice_banker
+			}
+			clr_quest = quest_the_devil_worshipers_sacrifice_banker
+			if = {
+				limit = { FROM = { is_female = yes } }
+				sound_effect = devil_worshippers_sacrifice_ruler_female
+			}
+			if = {
+				limit = { FROM = { is_female = no } }
+				sound_effect = devil_worshippers_sacrifice_ruler_male
 			}
 			add_society_currency_medium_effect = yes
 			break = yes
@@ -5595,6 +5629,23 @@ character_event = { #Dwarf
 		}
 		if = {
 			limit = { 
+				FROM = { trait = banker }
+				has_quest = quest_the_devil_worshipers_sacrifice_banker
+			}
+			clr_quest = quest_the_devil_worshipers_sacrifice_banker
+			if = {
+				limit = { FROM = { is_female = yes } }
+				sound_effect = devil_worshippers_sacrifice_ruler_female
+			}
+			if = {
+				limit = { FROM = { is_female = no } }
+				sound_effect = devil_worshippers_sacrifice_ruler_male
+			}
+			add_society_currency_medium_effect = yes
+			break = yes
+		}
+		if = {
+			limit = { 
 				FROM = { is_landed = yes }
 				has_quest = quest_the_devil_worshipers_sacrifice_ruler
 			}
@@ -5686,6 +5737,23 @@ character_event = { #child
 				sound_effect = devil_worshippers_sacrifice_dwarf_male
 			}
 			add_society_currency_minor_effect = yes
+			break = yes
+		}
+		if = {
+			limit = { 
+				FROM = { trait = banker }
+				has_quest = quest_the_devil_worshipers_sacrifice_banker
+			}
+			clr_quest = quest_the_devil_worshipers_sacrifice_banker
+			if = {
+				limit = { FROM = { is_female = yes } }
+				sound_effect = devil_worshippers_sacrifice_ruler_female
+			}
+			if = {
+				limit = { FROM = { is_female = no } }
+				sound_effect = devil_worshippers_sacrifice_ruler_male
+			}
+			add_society_currency_medium_effect = yes
 			break = yes
 		}
 		if = {
@@ -5785,6 +5853,23 @@ character_event = { #Virgin
 		}
 		if = {
 			limit = { 
+				FROM = { trait = banker }
+				has_quest = quest_the_devil_worshipers_sacrifice_banker
+			}
+			clr_quest = quest_the_devil_worshipers_sacrifice_banker
+			if = {
+				limit = { FROM = { is_female = yes } }
+				sound_effect = devil_worshippers_sacrifice_ruler_female
+			}
+			if = {
+				limit = { FROM = { is_female = no } }
+				sound_effect = devil_worshippers_sacrifice_ruler_male
+			}
+			add_society_currency_medium_effect = yes
+			break = yes
+		}
+		if = {
+			limit = { 
 				FROM = { is_landed = yes }
 				has_quest = quest_the_devil_worshipers_sacrifice_ruler
 			}
@@ -5876,6 +5961,23 @@ character_event = { #regular dude
 				sound_effect = devil_worshippers_sacrifice_dwarf_male
 			}
 			add_society_currency_minor_effect = yes
+			break = yes
+		}
+		if = {
+			limit = { 
+				FROM = { trait = banker }
+				has_quest = quest_the_devil_worshipers_sacrifice_banker
+			}
+			clr_quest = quest_the_devil_worshipers_sacrifice_banker
+			if = {
+				limit = { FROM = { is_female = yes } }
+				sound_effect = devil_worshippers_sacrifice_ruler_female
+			}
+			if = {
+				limit = { FROM = { is_female = no } }
+				sound_effect = devil_worshippers_sacrifice_ruler_male
+			}
+			add_society_currency_medium_effect = yes
 			break = yes
 		}
 		if = {
@@ -6966,6 +7068,10 @@ society_quest_event = {
 		random_list = {
 			10 = { set_character_flag = sacrifice_ruler }
 			10 = { set_character_flag = sacrifice_holy_person }
+			if = { 
+				limit = { society_member_of = the_iww }
+				10 = { set_character_flag = sacrifice_banker }
+			}
 			10 = { set_character_flag = sacrifice_virgin }
 			5 = { set_character_flag = sacrifice_dwarf }
 		}
@@ -6974,6 +7080,10 @@ society_quest_event = {
 	option = {
 		name = ACCEPT
 
+		if = {
+			limit = { has_character_flag = sacrifice_banker }
+			set_quest = quest_the_devil_worshipers_sacrifice_banker	
+		}
 		if = {
 			limit = { has_character_flag = sacrifice_ruler }
 			set_quest = quest_the_devil_worshipers_sacrifice_ruler	

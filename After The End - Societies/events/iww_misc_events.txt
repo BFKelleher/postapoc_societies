@@ -20,3 +20,114 @@ character_event = {
 		}
 	}
 }
+character_event = { #Banker sacrifice
+	id = IWW.2
+	picture = GFX_evt_sacrifice
+	desc = IWW.2.d
+	border = GFX_event_normal_frame_intrigue
+
+	is_triggered_only = yes
+
+	option = {
+		name = IWW.2.a
+		FROM = {
+			hidden_effect = { character_event = { id = MNM.7506 } }
+			death = {
+				death_reason = death_missing
+			}
+		}
+
+		#Clear missions and give rewards
+		if = {
+			limit = { 
+				FROM = { is_virgin_trigger = yes }
+				has_quest = quest_the_devil_worshipers_sacrifice_virgin
+			}
+			clr_quest = quest_the_devil_worshipers_sacrifice_virgin
+			if = {
+				limit = { FROM = { is_female = yes } }
+				sound_effect = devil_worshippers_sacrifice_virgin_female
+			}
+			if = {
+				limit = { FROM = { is_female = no } }
+				sound_effect = devil_worshippers_sacrifice_virgin_male
+			}
+			add_society_currency_medium_effect = yes
+			break = yes
+		}
+		if = {
+			limit = { 
+				OR = {
+					FROM = { is_priest = yes }
+					FROM = { is_ascetic_trigger = yes }
+				}
+				has_quest = quest_the_devil_worshipers_sacrifice_holy_person
+			}
+			clr_quest = quest_the_devil_worshipers_sacrifice_holy_person
+			if = {
+				limit = { FROM = { is_female = yes } }
+				sound_effect = devil_worshippers_sacrifice_holy_woman
+			}
+			if = {
+				limit = { FROM = { is_female = no } }
+				sound_effect = devil_worshippers_sacrifice_holy_man
+			}
+			add_society_currency_medium_effect = yes
+			break = yes
+		}
+		if = {
+			limit = { 
+				FROM = { trait = dwarf }
+				has_quest = quest_the_devil_worshipers_sacrifice_dwarf
+			}
+			clr_quest = quest_the_devil_worshipers_sacrifice_dwarf
+			if = {
+				limit = { FROM = { is_female = yes } }
+				sound_effect = devil_worshippers_sacrifice_dwarf_female
+			}
+			if = {
+				limit = { FROM = { is_female = no } }
+				sound_effect = devil_worshippers_sacrifice_dwarf_male
+			}
+			add_society_currency_medium_effect = yes
+			break = yes
+		}
+		if = {
+			limit = { 
+				FROM = { trait = banker }
+				has_quest = quest_the_devil_worshipers_sacrifice_banker
+			}
+			clr_quest = quest_the_devil_worshipers_sacrifice_banker
+			if = {
+				limit = { FROM = { is_female = yes } }
+				sound_effect = devil_worshippers_sacrifice_ruler_female
+			}
+			if = {
+				limit = { FROM = { is_female = no } }
+				sound_effect = devil_worshippers_sacrifice_ruler_male
+			}
+			add_society_currency_medium_effect = yes
+			break = yes
+		}
+		if = {
+			limit = { 
+				FROM = { is_landed = yes }
+				has_quest = quest_the_devil_worshipers_sacrifice_ruler
+			}
+			clr_quest = quest_the_devil_worshipers_sacrifice_ruler
+			if = {
+				limit = { FROM = { is_female = yes } }
+				sound_effect = devil_worshippers_sacrifice_ruler_female
+			}
+			if = {
+				limit = { FROM = { is_female = no } }
+				sound_effect = devil_worshippers_sacrifice_ruler_male
+			}
+			add_society_currency_medium_effect = yes
+			break = yes
+		}
+
+		#And if there is no quest is completed
+		add_society_currency_minor_effect = yes
+	}
+}

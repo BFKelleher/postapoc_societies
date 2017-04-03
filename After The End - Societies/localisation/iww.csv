@@ -33,3 +33,5 @@ String_overalls;overalls;;;;;;;;;;;;;x
 String_Martyred_Comrade;Martyred Comrade;;;;;;;;;;;;;x
 String_Solidarity;Solidarity;;;;;;;;;;;;;x
 String_the_IWW;the IWW;;;;;;;;;;;;;x
+IWW.2.d;As [From.GetTitledFirstName] is bound to the altar [From.GetSheHe] appears to be mumbling prayers through [From.GetHerHis] gag. [From.GetSheHeCap] is sweating profusely, either due to the heat from the nearby pyres or from fear. [From.GetHerHisCap] a fine suit hangs in tatters already, exposing [From.GetHerHis] chest. As the appointed hour draws near the chanting of your brethren builds to a crescendo until, finally, it is time.;;;;;;;;;;;;;x
+IWW.2.a;Plunge my knife into [From.GetHerHis] chest!;Enfoncer mon couteau dans sa poitrine !;Stoßt das Messer in seine/ihre Brust!;;¡Le clavo la daga en el pecho!;;;;;;;;;x

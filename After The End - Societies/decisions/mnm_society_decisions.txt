@@ -1766,6 +1766,7 @@ targeted_decisions = {
 				factor = 0.01
 				NOR = {
 					trait = dwarf
+					trait = banker
 					is_priest = yes 
 					is_ascetic_trigger = yes
 					is_virgin_trigger = yes
@@ -1789,6 +1790,14 @@ targeted_decisions = {
 						}
 						character_event = { id = MNM.7500 }
 						break = yes
+					}
+					if = {
+						limit = {
+							ROOF = {
+								trait = banker #Banker
+							}
+						}
+						character_event = ( id = IWW.2 )
 					}
 					if = {
 						limit = { 
