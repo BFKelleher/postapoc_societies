@@ -118,18 +118,18 @@ character_event = {
 			modifier = {
 				factor = 0.2
 				OR = {
-					#AND = {
-					#	has_character_flag = being_recruited_by_the_satanists
-					#	true_religion_group_christian_trigger = no
-					#	true_religion_group_muslim_trigger = no
-					#	true_religion_group_jewish_group_trigger = no
-					#	true_religion_group_zoroastrian_group_trigger = no
-					#}
-					#AND = {
-					#	has_character_flag = being_recruited_by_the_trollcrafters
-					#	true_religion_norse_pagan_reformed_trigger = no
-					#	true_religion_norse_pagan_trigger = no
-					#}
+					AND = {
+						has_character_flag = being_recruited_by_the_satanists
+						true_religion_group_christian_trigger = no
+						true_religion_group_muslim_trigger = no
+						true_religion_group_jewish_group_trigger = no
+						true_religion_group_zoroastrian_group_trigger = no
+					}
+					AND = {
+						has_character_flag = being_recruited_by_the_trollcrafters
+						true_religion_norse_pagan_reformed_trigger = no
+						true_religion_norse_pagan_trigger = no
+					}
 					AND = {
 						has_character_flag = being_recruited_by_the_iww
 						true_religion_americanist_trigger = no
@@ -162,7 +162,7 @@ character_event = {
 
 		clr_character_flag = being_recruited_by_the_iww
 		#clr_character_flag = being_recruited_by_the_satanists
-		#clr_character_flag = being_recruited_by_the_trollcrafters
+		clr_character_flag = being_recruited_by_the_trollcrafters
 		#clr_character_flag = being_recruited_by_the_plaguebringers
 
 		hidden_effect = { 
@@ -298,7 +298,7 @@ character_event = { # event notifying recruitee that "Something must've gone wro
 		custom_tooltip = { text = EVTTOOLTIP_MNM_6995 }
 		clr_character_flag = being_recruited_by_the_iww
 		#clr_character_flag = being_recruited_by_the_satanists
-		#clr_character_flag = being_recruited_by_the_trollcrafters
+		clr_character_flag = being_recruited_by_the_trollcrafters
 	}
 }
 
@@ -479,7 +479,7 @@ character_event = {
 		
 		clr_character_flag = being_recruited_by_the_iww
 		#clr_character_flag = being_recruited_by_the_satanists
-		#clr_character_flag = being_recruited_by_the_trollcrafters
+		clr_character_flag = being_recruited_by_the_trollcrafters
 
 
 		
@@ -653,7 +653,7 @@ character_event = {
 		custom_tooltip = { text = EVTOPTB_7005_TT }
 		clr_character_flag = being_recruited_by_the_iww
 		#clr_character_flag = being_recruited_by_the_satanists
-		#clr_character_flag = being_recruited_by_the_trollcrafters
+		clr_character_flag = being_recruited_by_the_trollcrafters
 
 		hidden_effect = { character_event = { id = MNM.6996 days = 1 } } # turn down the satanists
 
@@ -985,28 +985,28 @@ letter_event = {
 			#		break = yes
 			#	}
 			#}
-			#if = {
-			#	limit = {
-			#		prefers_men_trigger = yes
-			#		has_character_flag = being_recruited_by_the_trollcrafters
-			#		any_society_member = {
-			#			society_member_of = the_trollcrafters
-			#			is_female = no
-			#			is_attractive_trigger = yes
-			#		}
-			#	}
-			#	random_society_member = {
-			#		limit = {
-			#			society_member_of = the_trollcrafters
-			#			is_female = no
-			#			is_attractive_trigger = yes
-			#		}
-			#		save_event_target_as = satanists_inductor
-			#		set_character_flag = event_MNM_7015
-			#		character_event = { id = MNM.7013 }
-			#		break = yes
-			#	}
-			#}
+			if = {
+				limit = {
+					prefers_men_trigger = yes
+					has_character_flag = being_recruited_by_the_trollcrafters
+					any_society_member = {
+						society_member_of = the_trollcrafters
+						is_female = no
+						is_attractive_trigger = yes
+					}
+				}
+				random_society_member = {
+					limit = {
+						society_member_of = the_trollcrafters
+						is_female = no
+						is_attractive_trigger = yes
+					}
+					save_event_target_as = satanists_inductor
+					set_character_flag = event_MNM_7015
+					character_event = { id = MNM.7013 }
+					break = yes
+				}
+			}
 			#start of prefer women 
 			if = {
 				limit = {
@@ -1052,28 +1052,28 @@ letter_event = {
 			#		break = yes
 			#	}
 			#}
-			#if = {
-			#	limit = {
-			#		prefers_men_trigger = no
-			#		has_character_flag = being_recruited_by_the_trollcrafters
-			#		any_society_member = {
-			#			society_member_of = the_trollcrafters
-			#			is_female = yes
-			#			is_attractive_trigger = yes
-			#		}
-			#	}
-			#	random_society_member = {
-			#		limit = {
-			#			society_member_of = the_trollcrafters
-			#			is_female = yes
-			#			is_attractive_trigger = yes
-			#		}
-			#		save_event_target_as = satanists_inductor
-			#		set_character_flag = event_MNM_7015
-			#		character_event = { id = MNM.7013 }
-			#		break = yes
-			#	}
-			#}
+			if = {
+				limit = {
+					prefers_men_trigger = no
+					has_character_flag = being_recruited_by_the_trollcrafters
+					any_society_member = {
+						society_member_of = the_trollcrafters
+						is_female = yes
+						is_attractive_trigger = yes
+					}
+				}
+				random_society_member = {
+					limit = {
+						society_member_of = the_trollcrafters
+						is_female = yes
+						is_attractive_trigger = yes
+					}
+					save_event_target_as = satanists_inductor
+					set_character_flag = event_MNM_7015
+					character_event = { id = MNM.7013 }
+					break = yes
+				}
+			}
 
 			if = { #back up if there is no eligble society member
 				limit = { prefers_men_trigger = yes }
@@ -1104,7 +1104,7 @@ letter_event = {
 							on_trigger = has_character_flag
 							being_recruited_by_the_iww = { PREV = { join_society = the_iww } }
 							#being_recruited_by_the_satanists = { PREV = { join_society = the_satanists } }
-							#being_recruited_by_the_trollcrafters = { PREV = { join_society = the_trollcrafters } }
+							being_recruited_by_the_trollcrafters = { PREV = { join_society = the_trollcrafters } }
 						}
 					}
 					character_event = { id = MNM.7013 }
@@ -1138,7 +1138,7 @@ letter_event = {
 							on_trigger = has_character_flag
 							being_recruited_by_the_iww = { PREV = { join_society = the_iww } }
 							#being_recruited_by_the_satanists = { PREV = { join_society = the_satanists } }
-							#being_recruited_by_the_trollcrafters = { PREV = { join_society = the_trollcrafters } }
+							being_recruited_by_the_trollcrafters = { PREV = { join_society = the_trollcrafters } }
 						}
 					}
 					character_event = { id = MNM.7013 }
@@ -1291,7 +1291,7 @@ character_event = {
 		custom_tooltip = { text = EVTTOOLTIP_MNM_6993 }
 		clr_character_flag = being_recruited_by_the_iww
 		#clr_character_flag = being_recruited_by_the_satanists
-		#clr_character_flag = being_recruited_by_the_trollcrafters
+		clr_character_flag = being_recruited_by_the_trollcrafters
 	}
 }
 
@@ -1465,17 +1465,17 @@ character_event = {
 				#		save_event_target_as = grand_master
 				#	}
 				#}
-				#if = { limit = { has_character_flag = being_recruited_by_the_trollcrafters }
-				#	random_society_member = {
-				#		limit = {
-				#			society_rank = {
-				#				rank == 4
-				#				society = the_trollcrafters
-				#			}
-				#		}
-				#		save_event_target_as = grand_master
-				#	}
-				#}
+				if = { limit = { has_character_flag = being_recruited_by_the_trollcrafters }
+					random_society_member = {
+						limit = {
+							society_rank = {
+								rank == 4
+								society = the_trollcrafters
+							}
+						}
+						save_event_target_as = grand_master
+					}
+				}
 				event_target:grand_master = { character_event = { id = MNM.7021 } }
 			}
 		}
@@ -1492,10 +1492,10 @@ character_event = {
 		#	limit = { has_character_flag = being_recruited_by_the_satanists }
 		#	join_society = the_satanists
 		#}
-		#if = {
-		#	limit = { has_character_flag = being_recruited_by_the_trollcrafters }
-		#	join_society = the_trollcrafters
-		#}
+		if = {
+			limit = { has_character_flag = being_recruited_by_the_trollcrafters }
+			join_society = the_trollcrafters
+		}
 
 		if = { 
 			limit = { ai = no }
@@ -1516,7 +1516,7 @@ character_event = {
 		hidden_effect = {
 			clr_character_flag = being_recruited_by_the_iww
 			#clr_character_flag = being_recruited_by_the_satanists
-			#clr_character_flag = being_recruited_by_the_trollcrafters
+			clr_character_flag = being_recruited_by_the_trollcrafters
 		}
 	}
 	option = {
@@ -1530,10 +1530,10 @@ character_event = {
 		#	limit = { has_character_flag = being_recruited_by_the_satanists }
 		#	join_society = the_satanists
 		#}
-		#if = {
-		#	limit = { has_character_flag = being_recruited_by_the_trollcrafters }
-		#	join_society = the_trollcrafters
-		#}
+		if = {
+			limit = { has_character_flag = being_recruited_by_the_trollcrafters }
+			join_society = the_trollcrafters
+		}
 
 		event_target:satanists_inductor = {
 			opinion = {
@@ -1568,22 +1568,22 @@ character_event = {
 				#		save_event_target_as = grand_master
 				#	}
 				#}
-				#if = { limit = { has_character_flag = being_recruited_by_the_trollcrafters }
-				#	random_society_member = {
-				#		limit = {
-				#			society_rank = {
-				#				rank == 4
-				#				society = the_trollcrafters
-				#			}
-				#		}
-				#		save_event_target_as = grand_master
-				#	}
-				#}
+				if = { limit = { has_character_flag = being_recruited_by_the_trollcrafters }
+					random_society_member = {
+						limit = {
+							society_rank = {
+								rank == 4
+								society = the_trollcrafters
+							}
+						}
+						save_event_target_as = grand_master
+					}
+				}
 				event_target:grand_master = { character_event = { id = MNM.7021 } }
 			}
 			clr_character_flag = being_recruited_by_the_iww
 			#clr_character_flag = being_recruited_by_the_satanists
-			#clr_character_flag = being_recruited_by_the_trollcrafters
+			clr_character_flag = being_recruited_by_the_trollcrafters
 		}
 	}
 }
@@ -1638,24 +1638,24 @@ character_event = {
 				#		save_event_target_as = grand_master
 				#	}
 				#}
-				#if = { limit = { has_character_flag = being_recruited_by_the_trollcrafters }
-				#	random_society_member = {
-				#		limit = {
-				#			society_rank = {
-				#				rank == 4
-				#				society = the_trollcrafters
-				#			}
-				#		}
-				#		save_event_target_as = grand_master
-				#	}
-				#}
+				if = { limit = { has_character_flag = being_recruited_by_the_trollcrafters }
+					random_society_member = {
+						limit = {
+							society_rank = {
+								rank == 4
+								society = the_trollcrafters
+							}
+						}
+						save_event_target_as = grand_master
+					}
+				}
 				event_target:grand_master = { character_event = { id = MNM.7021 } }
 			}
 		}
 
 		clr_character_flag = being_recruited_by_the_iww
 		#clr_character_flag = being_recruited_by_the_satanists
-		#clr_character_flag = being_recruited_by_the_trollcrafters
+		clr_character_flag = being_recruited_by_the_trollcrafters
 	}
 
 	#Escape successfully
@@ -1704,7 +1704,7 @@ character_event = {
 		custom_tooltip = { text = EVTOPTA_7020_TT}
 		clr_character_flag = being_recruited_by_the_iww
 		#clr_character_flag = being_recruited_by_the_satanists
-		#clr_character_flag = being_recruited_by_the_trollcrafters
+		clr_character_flag = being_recruited_by_the_trollcrafters
 	}
 }
 
@@ -1773,10 +1773,10 @@ character_event = {
 						#	has_character_flag = being_recruited_by_the_satanists
 						#	NOT = { society_member_of = the_satanists }
 						#}
-						#AND = {
-						#	has_character_flag = being_recruited_by_the_trollcrafters
-						#	NOT = { society_member_of = the_trollcrafters }
-						#}
+						AND = {
+							has_character_flag = being_recruited_by_the_trollcrafters
+							NOT = { society_member_of = the_trollcrafters }
+						}
 						#AND = {
 						#	has_character_flag = assassins_attempted_recruitment
 						#	NOT = { society_member_of = the_assassins }
@@ -1805,17 +1805,17 @@ character_event = {
 				#		save_event_target_as = grand_master
 				#	}
 				#}
-				#if = { limit = { has_character_flag = being_recruited_by_the_trollcrafters }
-				#	random_society_member = {
-				#		limit = {
-				#			society_rank = {
-				#				rank == 4
-				#				society = the_trollcrafters
-				#			}
-				#		}
-				#		save_event_target_as = grand_master
-				#	}
-				#}
+				if = { limit = { has_character_flag = being_recruited_by_the_trollcrafters }
+					random_society_member = {
+						limit = {
+							society_rank = {
+								rank == 4
+								society = the_trollcrafters
+							}
+						}
+						save_event_target_as = grand_master
+					}
+				}
 				#if = { limit = { has_character_flag = assassins_attempted_recruitment }
 				#	random_society_member = {
 				#		limit = {
@@ -1872,10 +1872,10 @@ letter_event = {
 		#	limit = { has_character_flag = being_recruited_by_the_satanists }
 		#	join_society = the_satanists
 		#}
-		#if = {
-		#	limit = { has_character_flag = being_recruited_by_the_trollcrafters }
-		#	join_society = the_trollcrafters
-		#}
+		if = {
+			limit = { has_character_flag = being_recruited_by_the_trollcrafters }
+			join_society = the_trollcrafters
+		}
 		#if = {
 		#	limit = { has_character_flag = assassins_attempted_recruitment }
 		#	join_society = the_assassins
@@ -1884,7 +1884,7 @@ letter_event = {
 		hidden_effect = {
 			clr_character_flag = being_recruited_by_the_iww
 			#clr_character_flag = being_recruited_by_the_satanists
-			#clr_character_flag = being_recruited_by_the_trollcrafters
+			clr_character_flag = being_recruited_by_the_trollcrafters
 			#clr_character_flag = assassins_attempted_recruitment
 		}
 	}
@@ -1900,7 +1900,7 @@ letter_event = {
 		hidden_effect = {
 			clr_character_flag = being_recruited_by_the_iww
 			#clr_character_flag = being_recruited_by_the_satanists
-			#clr_character_flag = being_recruited_by_the_trollcrafters
+			clr_character_flag = being_recruited_by_the_trollcrafters
 			#clr_character_flag = assassins_attempted_recruitment
 		}
 		ai_chance = { factor = 0 }
@@ -4201,10 +4201,10 @@ character_event = {
 			#	limit = { ROOT = { society_member_of = the_satanists } }
 			#	join_society = the_satanists
 			#}
-			#if = {
-			#	limit = { ROOT = { society_member_of = the_trollcrafters } }
-			#	join_society = the_trollcrafters
-			#}
+			if = {
+				limit = { ROOT = { society_member_of = the_trollcrafters } }
+				join_society = the_trollcrafters
+			}
 		}
 		
 		name = EVTOPTA_MNM_7123

@@ -2119,6 +2119,13 @@ targeted_decisions = {
 				ai = no
 				NOR = {
 					AND = {
+						society_member_of = the_iww
+						is_society_rank_full = {
+							society = the_iww
+							rank = 1
+						}
+					}
+					AND = {
 						society_member_of = the_satanists
 						is_society_rank_full = {
 							society = the_satanists

@@ -2446,7 +2446,7 @@ is_devil_worshiper_trigger = {
 		OR = {
 			society_member_of = the_iww
 			#society_member_of = the_satanists
-			#society_member_of = the_trollcrafters
+			society_member_of = the_trollcrafters
 		}
 	}
 }
@@ -3280,15 +3280,15 @@ has_common_devilworship_prerequisites = {
 #	}
 #}
 
-#has_trollcrafters_prerequisites = {
-#	has_common_devilworship_prerequisites = yes
-#	OR = {
-#		religion = norse_pagan
-#		religion = norse_pagan_reformed
-#		trait = secretly_norse_pagan
-#		trait = secretly_norse_pagan_reformed
-#	}
-#}
+has_trollcrafters_prerequisites = {
+	has_common_devilworship_prerequisites = yes
+	OR = {
+		religion = norse_pagan
+		religion = norse_pagan_reformed
+		#trait = secretly_norse_pagan
+		#trait = secretly_norse_pagan_reformed
+	}
+}
 
 same_society_rank_as_prev_trigger = {
 	OR = {

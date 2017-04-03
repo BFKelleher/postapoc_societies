@@ -26,10 +26,10 @@ defined_text = {
 			}
 		}
 	}
-	#text = {
-	#	localisation_key = String_Hel
-	#	trigger = { society_member_of = the_trollcrafters }
-	#}
+	text = {
+		localisation_key = String_Hel
+		trigger = { society_member_of = the_trollcrafters }
+	}
 	text = {
 		localisation_key = String_Marx
 		trigger = {
@@ -69,10 +69,10 @@ defined_text = {
 	#		religion_group = christian
 	#	} 
 	#}
-	#text = {
-	#	localisation_key = String_seiðr
-	#	trigger = { society_member_of = the_trollcrafters } 
-	#}
+	text = {
+		localisation_key = String_seiðr
+		trigger = { society_member_of = the_trollcrafters } 
+	}
 }
 
 defined_text = {
@@ -102,10 +102,10 @@ defined_text = {
 			}
 		} 
 	}
-	#text = {
-	#	localisation_key = String_jotun
-	#	trigger = { society_member_of = the_trollcrafters } 
-	#}
+	text = {
+		localisation_key = String_jotun
+		trigger = { society_member_of = the_trollcrafters } 
+	}
 }
 
 defined_text = {
@@ -135,10 +135,10 @@ defined_text = {
 			}
 		} 
 	}
-	#text = {
-	#	localisation_key = String_jotnar
-	#	trigger = { society_member_of = the_trollcrafters } 
-	#}
+	text = {
+		localisation_key = String_jotnar
+		trigger = { society_member_of = the_trollcrafters } 
+	}
 }
 
 defined_text = {
@@ -164,20 +164,20 @@ defined_text = {
 	#		society_member_of = the_satanists
 	#	}
 	#}
-	#text = {
-	#	localisation_key = String_seiðkona
-	#	trigger = {
-	#		is_female = yes
-	#		society_member_of = the_trollcrafters
-	#	}
-	#}
-	#text = {
-	#	localisation_key = String_seiðmaðr
-	#	trigger = {
-	#		is_female = no
-	#		society_member_of = the_trollcrafters
-	#	}
-	#}
+	text = {
+		localisation_key = String_seiðkona
+		trigger = {
+			is_female = yes
+			society_member_of = the_trollcrafters
+		}
+	}
+	text = {
+		localisation_key = String_seiðmaðr
+		trigger = {
+			is_female = no
+			society_member_of = the_trollcrafters
+		}
+	}
 }
 
 defined_text = {
@@ -196,10 +196,10 @@ defined_text = {
 			}
 		}
 	}
-	#text = {
-	#	localisation_key = String_Glory_to_Hel
-	#	trigger = { society_member_of = the_trollcrafters }
-	#}
+	text = {
+		localisation_key = String_Glory_to_Hel
+		trigger = { society_member_of = the_trollcrafters }
+	}
 }
 defined_text = {
 	name = GetDWRandomDemon
@@ -312,30 +312,30 @@ defined_text = {
 	#	}
 	#	localisation_key = String_Pythius
 	#}
-	#text = {
-	#	trigger = {
-	#		society_member_of = the_trollcrafters
-	#	}
-	#	localisation_key = String_Angrboda
-	#}
-	#text = {
-	#	trigger = {
-	#		society_member_of = the_trollcrafters
-	#	}
-	#	localisation_key = String_Beli
-	#}
-	#text = {
-	#	trigger = {
-	#		society_member_of = the_trollcrafters
-	#	}
-	#	localisation_key = String_Fenrir
-	#}
-	#text = {
-	#	trigger = {
-	#		society_member_of = the_trollcrafters
-	#	}
-	#	localisation_key = String_Great_Loki
-	#}
+	text = {
+		trigger = {
+			society_member_of = the_trollcrafters
+		}
+		localisation_key = String_Angrboda
+	}
+	text = {
+		trigger = {
+			society_member_of = the_trollcrafters
+		}
+		localisation_key = String_Beli
+	}
+	text = {
+		trigger = {
+			society_member_of = the_trollcrafters
+		}
+		localisation_key = String_Fenrir
+	}
+	text = {
+		trigger = {
+			society_member_of = the_trollcrafters
+		}
+		localisation_key = String_Great_Loki
+	}
 }
 defined_text = {
 	name = GetDWPartyClothes
@@ -413,12 +413,12 @@ defined_text = {
 	#	}
 	#	localisation_key = String_Demon_Prince
 	#}
-	#text = {
-	#	trigger = {
-	#		society_member_of = the_trollcrafters
-	#	}
-	#	localisation_key = String_Jotun_Lord
-	#}
+	text = {
+		trigger = {
+			society_member_of = the_trollcrafters
+		}
+		localisation_key = String_Jotun_Lord
+	}
 }
 defined_text = {
 	name = GetDWBrethrenType
@@ -448,10 +448,10 @@ defined_text = {
 	#	localisation_key = currency_name_the_satanists
 	#	trigger = { society_member_of = the_satanists }
 	#}
-	#text = {
-	#	localisation_key = currency_name_the_trollcrafters
-	#	trigger = { society_member_of = the_trollcrafters }
-	#}
+	text = {
+		localisation_key = currency_name_the_trollcrafters
+		trigger = { society_member_of = the_trollcrafters }
+	}
 	#text = {
 	#	localisation_key = currency_name_monastic_order_benedictine
 	#	trigger = { society_member_of = monastic_order_benedictine }
