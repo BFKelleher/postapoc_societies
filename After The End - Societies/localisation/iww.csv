@@ -33,3 +33,4 @@ String_overalls;overalls;;;;;;;;;;;;;x
 String_Martyred_Comrade;Martyred Comrade;;;;;;;;;;;;;x
 String_Solidarity;Solidarity;;;;;;;;;;;;;x
 String_the_IWW;the IWW;;;;;;;;;;;;;x
+EVTDESC_MNM_7025_IWW;[Root.GetDWDevil]'s favors, [Root.GetSocietyRank] [Root.GetFirstName],\n\nThe great and mighty [Root.GetDWDevil] has given us so much, and now it is time for us to offer them a gift in return. [Root.GetDWDevil] craves a soul to serve them in their gulag and we have the perfect kind in mind. Capture and sacrifice a [Root.GetDWSacrifice], [Root.GetSocietyRank]!\n\n[Root.GetDWExpression]\nSigned, [From.GetSocietyRank] [From.GetFirstName];;;;;;;;;;;;;x
