@@ -2156,6 +2156,6 @@ secret_cults_conduct_ceremony =
 the_iww_interface =
 {
 	file = "the_iww_interface_01.wav"
-	volume = 17
+	volume = 23
 	on_demand = yes
 }
