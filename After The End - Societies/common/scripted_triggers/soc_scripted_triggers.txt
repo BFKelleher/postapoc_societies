@@ -12,60 +12,23 @@ has_iww_prerequisites = {
 }
 #True religion triggers
 true_religion_americanist_trigger = {
-	OR = {
-		AND = {
-			religion = americanist
-			has_secret_religion_trait_trigger = no
-		}
-	#	trait = secretly_americanist 
-	}
+	true_religion = americanist
 }
 true_religion_hamiltonian_trigger = {
-	OR = {
-		AND = {
-			religion = hamiltonian
-			has_secret_religion_trait_trigger = no
-		}
-	#	trait = secretly_hamiltonian 
-	}
+	true_religion = hamiltonian
 }
 true_religion_jeffersonian_trigger = {
-	OR = {
-		AND = {
-			religion = jeffersonian
-			has_secret_religion_trait_trigger = no
-		}
-	#	trait = secretly_jeffersonian 
-	}
+	true_religion = jeffersonian
 }
 true_religion_libertarian_trigger = {
-	OR = {
-		AND = {
-			religion = libertarian
-			has_secret_religion_trait_trigger = no
-		}
-	#	trait = secretly_libertarian 
-	}
+	true_religion = libertarian
 }
 true_religion_consumerist_trigger = {
-	OR = {
-		AND = {
-			religion = consumerist
-			has_secret_religion_trait_trigger = no
-		}
-	#	trait = secretly_consumerist 
-	}
+	true_religion = consumerist
 }
 true_religion_rust_cultist_trigger = {
-	OR = {
-		AND = {
-			OR = {
-				religion = rust_cultist
-				religion = rust_cultist_reformed
-			}
-			has_secret_religion_trait_trigger = no
-		}
-	#	trait = secretly_rust_cultist
-	#	trait = secretly_rust_cultist_reformed
-	}
+	true_religion = rust_cultist
+}
+true_religion_rust_cultist_reformed_trigger = {
+	true_religion = rust_cultist_reformed
 }

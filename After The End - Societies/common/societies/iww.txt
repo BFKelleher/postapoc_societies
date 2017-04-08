@@ -1,4 +1,4 @@
-###RADICAL LEFT###
+###THE IWW###
 the_iww = {
 	primary_attribute = intrigue
 	is_secret = yes
@@ -8,7 +8,7 @@ the_iww = {
 	opinion_to_pretenders = -40			#Pretenders is the opinion you have of people perceived/discovered to be in your society.
 	opinion_to_perceived_members = -40	#Perceived is the opinion you have of people perceived/discovered to be of a society you're not part of
 	opinion_per_rank_above = +10
-	sound = devil_worshippers_interface
+	sound = the_iww_interface
 	society_ranks_gfx = devil_ranks
 	
 	active = {
@@ -39,6 +39,9 @@ the_iww = {
 			}
 		}
 		has_iww_prerequisites = yes
+		hidden_trigger = {
+			NOT = { has_character_flag = society_join_block }
+		}
 	}
 
 	show_society = {
@@ -316,6 +319,7 @@ the_iww = {
 				true_religion_libertarian_group_trigger = yes
 				true_religion_consumerist_trigger = yes
 				true_religion_rust_cultist_trigger = yes
+				true_religion_rust_cultist_reformed_trigger = yes
 			}
 			OR = {
 				has_impious_trait_trigger = yes

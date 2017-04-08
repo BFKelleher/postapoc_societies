@@ -38,6 +38,9 @@ the_trollcrafters = {
 			}
 		}
 		has_trollcrafters_prerequisites = yes
+		hidden_trigger = {
+			NOT = { has_character_flag = society_join_block }
+		}
 	}
 	
 	show_society = {
@@ -51,8 +54,8 @@ the_trollcrafters = {
 		OR = {
 			religion = norse_pagan
 			religion = norse_pagan_reformed
-			trait = secretly_norse_pagan
-			trait = secretly_norse_pagan_reformed
+			secret_religion = norse_pagan
+			secret_religion = norse_pagan_reformed
 			society_member_of = the_trollcrafters
 		}
 	}
